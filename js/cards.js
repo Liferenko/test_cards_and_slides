@@ -8,7 +8,7 @@ var cards_dashboard = new Vue({
       
       rating: {
         counter: 5.0,
-        quantity: 3301
+        quantity: 260
       },
       price: 'от 500 '
     }
