@@ -1,11 +1,23 @@
-.header {
-  padding: 5% 0 3%;
-}
-
 .task-card-style {
   border: 1px solid #ddd;
   background: #fff;
 }
+
+.task-card-style:hover {
+  
+  background: #f0f0f0;
+  cursor: pointer;
+  border: 1px solid rgba(0, 153, 0, 0.3);  
+  border-radius: 2px;
+  box-shadow: 2px 5px 4px rgba(0, 153, 0, 0.3);
+
+}
+
+.header {
+  padding: 5% 0 3%;
+}
+
+
 #freelancer_data {
   border-bottom: 1px solid rgba(0,0,0,0.1);
   padding-bottom: 0;
@@ -24,11 +36,22 @@
   color: #ddd;
 }
 
+.card-score {
+  color: #ffa800;
+}
 .card-heart {
   color: #DDD;
 }
+.card-heart i:hover {
+  color: #ffa800;
+}
+
 .card-price {
   color: #090;
+  font-weight: bold;
+}
+.card-price i {
+  font-size: 90%;
 }
 
 

@@ -16,24 +16,18 @@
 <div class="jumbotron">
   <h2 class="header text-center">Список карточек</h2>
   <div id="cards_dashboard" class="">
-    <taskcard>1</taskcard>
-    <taskcard>1</taskcard>
-    <taskcard>1</taskcard>
-    <taskcard>1</taskcard>
-    <taskcard>1</taskcard>
-    
-    <taskcard>1</taskcard>
-    <taskcard>1</taskcard>
+    <taskcard></taskcard>
+    <taskcard></taskcard>
     <taskcard></taskcard>
     <taskcard></taskcard>
     <taskcard></taskcard>
     
     <taskcard></taskcard>
     <taskcard></taskcard>
-
-
-         
-  </div>
+    <taskcard></taskcard>
+    <taskcard></taskcard>
+    <taskcard></taskcard>
+</div>
 
     <template id="taskcard-template">        
             <div class="task-card-style col-xs-1-5 col-sm-1-5 col-md-1-5 col-lg-1-5">
@@ -46,7 +40,7 @@
                     <p class="card-title username text-left"><i class="fa fa-circle user_status_offline" style="font-size: 9px;" aria-hidden="true"></i> userName</p>
                   </div>
                   <div class="col-6">
-                    <p class="card-title text-right"><i class="fa fa-star" aria-hidden="true"></i> 5.0 <span style="color: rgba(0,0,0,0.4); font-size: 90%;">(260)</span></p>     
+                    <p class="card-score text-right"><i class="fa fa-star" aria-hidden="true"></i> 5.0 <span style="color: rgba(0,0,0,0.4); font-size: 90%;">(260)</span></p>     
                   </div>        
   
                 </div>
@@ -78,21 +72,28 @@
 				<div class="carousel-inner">
 					<div class="item active">
 						<div class="carousel-col">
+							<img src="http://www.mforum.ru/phones/images/nokia5500musicedition_e2.jpg"></img>
 							<taskcard></taskcard>
 						</div>
 					</div>
 					<div class="item">
 						<div class="carousel-col">
+							<img src="http://www.mforum.ru/phones/images/nokia5500musicedition_e2.jpg"></img>
+
 							<taskcard></taskcard>
 						</div>
 					</div>
 					<div class="item">
 						<div class="carousel-col">
+							<img src="http://www.mforum.ru/phones/images/nokia5500musicedition_e2.jpg"></img>
+							
 							<taskcard></taskcard>
 						</div>
 					</div>
 					<div class="item">
 						<div class="carousel-col">
+							<img src="http://www.mforum.ru/phones/images/nokia5500musicedition_e2.jpg"></img>
+
 							<taskcard></taskcard>
 						</div>
 					</div>
@@ -117,31 +118,7 @@
 	</div>
 </div>
 
-<script type="text/javascript">
-  /*global $*/
-$('.carousel[data-type="multi"] .item').each(function() {
-	var next = $(this).next();
-	if (!next.length) {
-		next = $(this).siblings(":first");
-	}
-	next
-		.children(":first-child")
-		.clone()
-		.appendTo($(this));
 
-	for (var i = 0; i < 2; i++) {
-		next = next.next();
-		if (!next.length) {
-			next = $(this).siblings(":first");
-		}
-
-		next
-			.children(":first-child")
-			.clone()
-			.appendTo($(this));
-	}
-});
-</script>
 
 </div>  
   
@@ -150,8 +127,6 @@ $('.carousel[data-type="multi"] .item').each(function() {
     
 <script type="text/javascript" src="js/cards.js"></script>
 <script type="text/javascript" src="js/slider.js"></script>
-<!-- Vue-Slick   -->
-  <!--<script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.8.0/slick.min.js"></script>-->
 
   <!--  Bootstrap JS  -->
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
