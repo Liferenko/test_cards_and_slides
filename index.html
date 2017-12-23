@@ -3,10 +3,13 @@
   <meta charset="UTF-8">
   <title>test task for M**a*o* 2017</title>
   <link rel="stylesheet" href="css/personal-grid.css">
-  <script src="js/cards.js"></script>
-  <script src="js/slider.js"></script>
+  <link rel="stylesheet" href="css/carousel.css">
+    
+  <script type="text/javascript" src="js/cards.js"></script>
+  <script type="text/javascript" src="js/slider.js"></script>
+
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
-<script src="https://use.fontawesome.com/d1b75bdd7b.js"></script>
+  <script src="https://use.fontawesome.com/d1b75bdd7b.js"></script>
 
 <!--  slider  -->
   <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.8.0/slick.css"/>
@@ -14,113 +17,414 @@
   
 </head>
 <body>
-<div class="jumbotron" style="display: none;">
+<div class="jumbotron">
   <h2 class="header text-center">Список карточек</h2>
-  <div id="cards_dashboard" class="container">
-      <div class="task-card-style col-xs-1-5 col-sm-1-5 col-md-1-5 col-lg-1-5" v-show="active">
-            <img class="card-img-top" :src="card.image" alt="чёткое описание картинки для людей с ограниченными возможностями по зрению">
-            <div class="card-body">
-
-              <p class="card-text">{{ card.text }}</p>
-              <div id="freelancer_data" class="row">
-                <div class="col-6">
-                  <p class="card-title username text-left"><i class="fa fa-circle user_status_offline" style="font-size: 9px;" aria-hidden="true"></i> {{ card.username }}</p>
-                </div>
-                <div class="col-6">
-                  <p class="card-title text-right"><i class="fa fa-star" aria-hidden="true"></i> {{ card.rating.counter }} <span style="color: rgba(0,0,0,0.4); font-size: 90%;">({{ card.rating.quantity }})</span></p>     
-                </div>        
-
-              </div>
-
-              <div id="price_data" class="row">
-                <div class="col-6">
-                  <p class="card-heart text-left"><i class="fa fa-heart" aria-hidden="true"></i></p>   
-                </div>
-                <div class="col-6">
-                  <p class="card-price text-right">{{ card.price }}<i class="fa fa-rub" aria-hidden="true"></i></p>        
-                </div>        
-
-              </div>          
-
-
-            </div>
-          </div>   
-    <div class="task-card-style col-xs-1-5 col-sm-1-5 col-md-1-5 col-lg-1-5" v-show="active">
-            <img class="card-img-top" :src="card.image" alt="чёткое описание картинки для людей с ограниченными возможностями по зрению">
-            <div class="card-body">
-
-              <p class="card-text">{{ card.text }}</p>
-              <div id="freelancer_data" class="row">
-                <div class="col-6">
-                  <p class="card-title username text-left"><i class="fa fa-circle user_status_offline" style="font-size: 9px;" aria-hidden="true"></i> {{ card.username }}</p>
-                </div>
-                <div class="col-6">
-                  <p class="card-title text-right"><i class="fa fa-star" aria-hidden="true"></i> {{ card.rating.counter }} <span style="color: rgba(0,0,0,0.4); font-size: 90%;">({{ card.rating.quantity }})</span></p>     
-                </div>        
-
-              </div>
-
-              <div id="price_data" class="row">
-                <div class="col-6">
-                  <p class="card-heart text-left"><i class="fa fa-heart" aria-hidden="true"></i></p>   
-                </div>
-                <div class="col-6">
-                  <p class="card-price text-right">{{ card.price }}<i class="fa fa-rub" aria-hidden="true"></i></p>        
-                </div>        
-
-              </div>          
-
-
-            </div>
-          </div>   
-    <div class="task-card-style col-xs-1-5 col-sm-1-5 col-md-1-5 col-lg-1-5" v-show="active">
-            <img class="card-img-top" :src="card.image" alt="чёткое описание картинки для людей с ограниченными возможностями по зрению">
-            <div class="card-body">
-
-              <p class="card-text">{{ card.text }}</p>
-              <div id="freelancer_data" class="row">
-                <div class="col-6">
-                  <p class="card-title username text-left"><i class="fa fa-circle user_status_offline" style="font-size: 9px;" aria-hidden="true"></i> {{ card.username }}</p>
-                </div>
-                <div class="col-6">
-                  <p class="card-title text-right"><i class="fa fa-star" aria-hidden="true"></i> {{ card.rating.counter }} <span style="color: rgba(0,0,0,0.4); font-size: 90%;">({{ card.rating.quantity }})</span></p>     
-                </div>        
-
-              </div>
-
-              <div id="price_data" class="row">
-                <div class="col-6">
-                  <p class="card-heart text-left"><i class="fa fa-heart" aria-hidden="true"></i></p>   
-                </div>
-                <div class="col-6">
-                  <p class="card-price text-right">{{ card.price }}<i class="fa fa-rub" aria-hidden="true"></i></p>        
-                </div>        
-
-              </div>          
-
-
-            </div>
-          </div>   
-    <div class="row">
-      
-      
-   </div>
+  <div id="cards_dashboard" class="">
+    <taskcard>77</taskcard>
     
+            <div class="task-card-style col-xs-1-5 col-sm-1-5 col-md-1-5 col-lg-1-5">
+              <img class="card-img-top" src="https://source.unsplash.com/random/800x600" alt="чёткое описание картинки для людей с ограниченными возможностями по зрению">
+              <div class="card-body">
+  
+                <p class="card-text">2Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec qu</p>
+                <div id="freelancer_data" class="row">
+                  <div class="col-6">
+                    <p class="card-title username text-left"><i class="fa fa-circle user_status_offline" style="font-size: 9px;" aria-hidden="true"></i> userName</p>
+                  </div>
+                  <div class="col-6">
+                    <p class="card-title text-right"><i class="fa fa-star" aria-hidden="true"></i> 5.0 <span style="color: rgba(0,0,0,0.4); font-size: 90%;">(260)</span></p>     
+                  </div>        
+  
+                </div>
+  
+                <div id="price_data" class="row">
+                  <div class="col-6">
+                    <p class="card-heart text-left"><i class="fa fa-heart" aria-hidden="true"></i></p>   
+                  </div>
+                  <div class="col-6">
+                    <p class="card-price text-right">от 500<i class="fa fa-rub" aria-hidden="true"></i></p>        
+                  </div>        
+  
+                </div>          
+  
+  
+              </div>
+            </div>
+            <div class="task-card-style col-xs-1-5 col-sm-1-5 col-md-1-5 col-lg-1-5">
+              <img class="card-img-top" src="https://source.unsplash.com/random/800x600" alt="чёткое описание картинки для людей с ограниченными возможностями по зрению">
+              <div class="card-body">
+  
+                <p class="card-text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec qu</p>
+                <div id="freelancer_data" class="row">
+                  <div class="col-6">
+                    <p class="card-title username text-left"><i class="fa fa-circle user_status_offline" style="font-size: 9px;" aria-hidden="true"></i> userName</p>
+                  </div>
+                  <div class="col-6">
+                    <p class="card-title text-right"><i class="fa fa-star" aria-hidden="true"></i> 5.0 <span style="color: rgba(0,0,0,0.4); font-size: 90%;">(260)</span></p>     
+                  </div>        
+  
+                </div>
+  
+                <div id="price_data" class="row">
+                  <div class="col-6">
+                    <p class="card-heart text-left"><i class="fa fa-heart" aria-hidden="true"></i></p>   
+                  </div>
+                  <div class="col-6">
+                    <p class="card-price text-right">от 500<i class="fa fa-rub" aria-hidden="true"></i></p>        
+                  </div>        
+  
+                </div>          
+  
+  
+              </div>
+            </div>
+            <div class="task-card-style col-xs-1-5 col-sm-1-5 col-md-1-5 col-lg-1-5">
+              <img class="card-img-top" src="https://source.unsplash.com/random/800x600" alt="чёткое описание картинки для людей с ограниченными возможностями по зрению">
+              <div class="card-body">
+  
+                <p class="card-text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec qu</p>
+                <div id="freelancer_data" class="row">
+                  <div class="col-6">
+                    <p class="card-title username text-left"><i class="fa fa-circle user_status_offline" style="font-size: 9px;" aria-hidden="true"></i> userName</p>
+                  </div>
+                  <div class="col-6">
+                    <p class="card-title text-right"><i class="fa fa-star" aria-hidden="true"></i> 5.0 <span style="color: rgba(0,0,0,0.4); font-size: 90%;">(260)</span></p>     
+                  </div>        
+  
+                </div>
+  
+                <div id="price_data" class="row">
+                  <div class="col-6">
+                    <p class="card-heart text-left"><i class="fa fa-heart" aria-hidden="true"></i></p>   
+                  </div>
+                  <div class="col-6">
+                    <p class="card-price text-right">от 500<i class="fa fa-rub" aria-hidden="true"></i></p>        
+                  </div>        
+  
+                </div>          
+  
+  
+              </div>
+            </div>
+            <div class="task-card-style col-xs-1-5 col-sm-1-5 col-md-1-5 col-lg-1-5">
+              <img class="card-img-top" src="https://source.unsplash.com/random/800x600" alt="чёткое описание картинки для людей с ограниченными возможностями по зрению">
+              <div class="card-body">
+  
+                <p class="card-text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec qu</p>
+                <div id="freelancer_data" class="row">
+                  <div class="col-6">
+                    <p class="card-title username text-left"><i class="fa fa-circle user_status_offline" style="font-size: 9px;" aria-hidden="true"></i> userName</p>
+                  </div>
+                  <div class="col-6">
+                    <p class="card-title text-right"><i class="fa fa-star" aria-hidden="true"></i> 5.0 <span style="color: rgba(0,0,0,0.4); font-size: 90%;">(260)</span></p>     
+                  </div>        
+  
+                </div>
+  
+                <div id="price_data" class="row">
+                  <div class="col-6">
+                    <p class="card-heart text-left"><i class="fa fa-heart" aria-hidden="true"></i></p>   
+                  </div>
+                  <div class="col-6">
+                    <p class="card-price text-right">от 500<i class="fa fa-rub" aria-hidden="true"></i></p>        
+                  </div>        
+  
+                </div>          
+  
+  
+              </div>
+            </div>
+            <div class="task-card-style col-xs-1-5 col-sm-1-5 col-md-1-5 col-lg-1-5">
+              <img class="card-img-top" src="https://source.unsplash.com/random/800x600" alt="чёткое описание картинки для людей с ограниченными возможностями по зрению">
+              <div class="card-body">
+  
+                <p class="card-text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec qu</p>
+                <div id="freelancer_data" class="row">
+                  <div class="col-6">
+                    <p class="card-title username text-left"><i class="fa fa-circle user_status_offline" style="font-size: 9px;" aria-hidden="true"></i> userName</p>
+                  </div>
+                  <div class="col-6">
+                    <p class="card-title text-right"><i class="fa fa-star" aria-hidden="true"></i> 5.0 <span style="color: rgba(0,0,0,0.4); font-size: 90%;">(260)</span></p>     
+                  </div>        
+  
+                </div>
+  
+                <div id="price_data" class="row">
+                  <div class="col-6">
+                    <p class="card-heart text-left"><i class="fa fa-heart" aria-hidden="true"></i></p>   
+                  </div>
+                  <div class="col-6">
+                    <p class="card-price text-right">от 500<i class="fa fa-rub" aria-hidden="true"></i></p>        
+                  </div>        
+  
+                </div>          
+  
+  
+              </div>
+            </div>
+            <div class="task-card-style col-xs-1-5 col-sm-1-5 col-md-1-5 col-lg-1-5">
+              <img class="card-img-top" src="https://source.unsplash.com/random/800x600" alt="чёткое описание картинки для людей с ограниченными возможностями по зрению">
+              <div class="card-body">
+  
+                <p class="card-text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec qu</p>
+                <div id="freelancer_data" class="row">
+                  <div class="col-6">
+                    <p class="card-title username text-left"><i class="fa fa-circle user_status_offline" style="font-size: 9px;" aria-hidden="true"></i> userName</p>
+                  </div>
+                  <div class="col-6">
+                    <p class="card-title text-right"><i class="fa fa-star" aria-hidden="true"></i> 5.0 <span style="color: rgba(0,0,0,0.4); font-size: 90%;">(260)</span></p>     
+                  </div>        
+  
+                </div>
+  
+                <div id="price_data" class="row">
+                  <div class="col-6">
+                    <p class="card-heart text-left"><i class="fa fa-heart" aria-hidden="true"></i></p>   
+                  </div>
+                  <div class="col-6">
+                    <p class="card-price text-right">от 500<i class="fa fa-rub" aria-hidden="true"></i></p>        
+                  </div>        
+  
+                </div>          
+  
+  
+              </div>
+            </div>
+            <div class="task-card-style col-xs-1-5 col-sm-1-5 col-md-1-5 col-lg-1-5">
+              <img class="card-img-top" src="https://source.unsplash.com/random/800x600" alt="чёткое описание картинки для людей с ограниченными возможностями по зрению">
+              <div class="card-body">
+  
+                <p class="card-text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec qu</p>
+                <div id="freelancer_data" class="row">
+                  <div class="col-6">
+                    <p class="card-title username text-left"><i class="fa fa-circle user_status_offline" style="font-size: 9px;" aria-hidden="true"></i> userName</p>
+                  </div>
+                  <div class="col-6">
+                    <p class="card-title text-right"><i class="fa fa-star" aria-hidden="true"></i> 5.0 <span style="color: rgba(0,0,0,0.4); font-size: 90%;">(260)</span></p>     
+                  </div>        
+  
+                </div>
+  
+                <div id="price_data" class="row">
+                  <div class="col-6">
+                    <p class="card-heart text-left"><i class="fa fa-heart" aria-hidden="true"></i></p>   
+                  </div>
+                  <div class="col-6">
+                    <p class="card-price text-right">от 500<i class="fa fa-rub" aria-hidden="true"></i></p>        
+                  </div>        
+  
+                </div>          
+  
+  
+              </div>
+            </div>
+            <div class="task-card-style col-xs-1-5 col-sm-1-5 col-md-1-5 col-lg-1-5">
+              <img class="card-img-top" src="https://source.unsplash.com/random/800x600" alt="чёткое описание картинки для людей с ограниченными возможностями по зрению">
+              <div class="card-body">
+  
+                <p class="card-text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec qu</p>
+                <div id="freelancer_data" class="row">
+                  <div class="col-6">
+                    <p class="card-title username text-left"><i class="fa fa-circle user_status_offline" style="font-size: 9px;" aria-hidden="true"></i> userName</p>
+                  </div>
+                  <div class="col-6">
+                    <p class="card-title text-right"><i class="fa fa-star" aria-hidden="true"></i> 5.0 <span style="color: rgba(0,0,0,0.4); font-size: 90%;">(260)</span></p>     
+                  </div>        
+  
+                </div>
+  
+                <div id="price_data" class="row">
+                  <div class="col-6">
+                    <p class="card-heart text-left"><i class="fa fa-heart" aria-hidden="true"></i></p>   
+                  </div>
+                  <div class="col-6">
+                    <p class="card-price text-right">от 500<i class="fa fa-rub" aria-hidden="true"></i></p>        
+                  </div>        
+  
+                </div>          
+  
+  
+              </div>
+            </div>
+            <div class="task-card-style col-xs-1-5 col-sm-1-5 col-md-1-5 col-lg-1-5">
+              <img class="card-img-top" src="https://source.unsplash.com/random/800x600" alt="чёткое описание картинки для людей с ограниченными возможностями по зрению">
+              <div class="card-body">
+  
+                <p class="card-text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec qu</p>
+                <div id="freelancer_data" class="row">
+                  <div class="col-6">
+                    <p class="card-title username text-left"><i class="fa fa-circle user_status_offline" style="font-size: 9px;" aria-hidden="true"></i> userName</p>
+                  </div>
+                  <div class="col-6">
+                    <p class="card-title text-right"><i class="fa fa-star" aria-hidden="true"></i> 5.0 <span style="color: rgba(0,0,0,0.4); font-size: 90%;">(260)</span></p>     
+                  </div>        
+  
+                </div>
+  
+                <div id="price_data" class="row">
+                  <div class="col-6">
+                    <p class="card-heart text-left"><i class="fa fa-heart" aria-hidden="true"></i></p>   
+                  </div>
+                  <div class="col-6">
+                    <p class="card-price text-right">от 500<i class="fa fa-rub" aria-hidden="true"></i></p>        
+                  </div>        
+  
+                </div>          
+  
+  
+              </div>
+            </div>
+            <div class="task-card-style col-xs-1-5 col-sm-1-5 col-md-1-5 col-lg-1-5">
+              <img class="card-img-top" src="https://source.unsplash.com/random/800x600" alt="чёткое описание картинки для людей с ограниченными возможностями по зрению">
+              <div class="card-body">
+  
+                <p class="card-text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec qu</p>
+                <div id="freelancer_data" class="row">
+                  <div class="col-6">
+                    <p class="card-title username text-left"><i class="fa fa-circle user_status_offline" style="font-size: 9px;" aria-hidden="true"></i> userName</p>
+                  </div>
+                  <div class="col-6">
+                    <p class="card-title text-right"><i class="fa fa-star" aria-hidden="true"></i> 5.0 <span style="color: rgba(0,0,0,0.4); font-size: 90%;">(260)</span></p>     
+                  </div>        
+  
+                </div>
+  
+                <div id="price_data" class="row">
+                  <div class="col-6">
+                    <p class="card-heart text-left"><i class="fa fa-heart" aria-hidden="true"></i></p>   
+                  </div>
+                  <div class="col-6">
+                    <p class="card-price text-right">от 500<i class="fa fa-rub" aria-hidden="true"></i></p>        
+                  </div>        
+  
+                </div>          
+  
+  
+              </div>
+            </div>
+         
   </div>
+
+    <template id="taskcard">        
+      <div class="task-card-style col-xs-1-5 col-sm-1-5 col-md-1-5 col-lg-1-5">
+            <img class="card-img-top" :src="card.image" alt="чёткое описание картинки для людей с ограниченными возможностями по зрению">
+            <div class="card-body">
+
+              <p class="card-text">{{ card.text }}</p>
+              <div id="freelancer_data" class="row">
+                <div class="col-6">
+                  <p class="card-title username text-left"><i class="fa fa-circle user_status_offline" style="font-size: 9px;" aria-hidden="true"></i> {{ card.username }}</p>
+                </div>
+                <div class="col-6">
+                  <p class="card-title text-right"><i class="fa fa-star" aria-hidden="true"></i> {{ card.rating.counter }} <span style="color: rgba(0,0,0,0.4); font-size: 90%;">({{ card.rating.quantity }})</span></p>     
+                </div>        
+
+              </div>
+
+              <div id="price_data" class="row">
+                <div class="col-6">
+                  <p class="card-heart text-left"><i class="fa fa-heart" aria-hidden="true"></i></p>   
+                </div>
+                <div class="col-6">
+                  <p class="card-price text-right">{{ card.price }}<i class="fa fa-rub" aria-hidden="true"></i></p>        
+                </div>        
+
+              </div>          
+
+
+            </div>
+          </div>  
+      </template>
+
 </div>
+
 <div class="jumbotron">
   <h2 class="header text-center">Слайдер карточек</h2>
-  <div id="slider" class="row lazy">
-    <div><img data-lazy="https://source.unsplash.com/random/800x600"/></div>      
-    <div><img data-lazy="https://source.unsplash.com/random/801x600"/></div>      
-    <div><img data-lazy="https://source.unsplash.com/random/799x600"/></div>      
-  </div>
+<div class="container">
+	<div class="row">
+		<div class="col-xs-11 col-md-10 col-centered">
+
+			<div id="carousel" class="carousel slide" data-ride="carousel" data-type="multi" data-interval="2500">
+				<div class="carousel-inner">
+					<div class="item active">
+						<div class="carousel-col">
+							<taskcard>77</taskcard>
+						</div>
+					</div>
+					<div class="item">
+						<div class="carousel-col">
+							<taskcard>77</taskcard>
+						</div>
+					</div>
+					<div class="item">
+						<div class="carousel-col">
+							<taskcard>77</taskcard>
+						</div>
+					</div>
+					<div class="item">
+						<div class="carousel-col">
+							<taskcard>77</taskcard>
+						</div>
+					</div>
+				</div>
+
+				<!-- Controls -->
+				<div class="left carousel-control">
+					<a href="#carousel" role="button" data-slide="prev">
+						<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+						<span class="sr-only">Previous</span>
+					</a>
+				</div>
+				<div class="right carousel-control">
+					<a href="#carousel" role="button" data-slide="next">
+						<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+						<span class="sr-only">Next</span>
+					</a>
+				</div>
+			</div>
+
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript">
+  /*global $*/
+$('.carousel[data-type="multi"] .item').each(function() {
+	var next = $(this).next();
+	if (!next.length) {
+		next = $(this).siblings(":first");
+	}
+	next
+		.children(":first-child")
+		.clone()
+		.appendTo($(this));
+
+	for (var i = 0; i < 2; i++) {
+		next = next.next();
+		if (!next.length) {
+			next = $(this).siblings(":first");
+		}
+
+		next
+			.children(":first-child")
+			.clone()
+			.appendTo($(this));
+	}
+});
+</script>
+
+
+  <!--<div id="slider" class="row lazy">-->
+  <!--  <div><img data-lazy="https://source.unsplash.com/random/800x600"/></div>      -->
+  <!--  <div><img data-lazy="https://source.unsplash.com/random/801x600"/></div>      -->
+  <!--  <div><img data-lazy="https://source.unsplash.com/random/799x600"/></div>  -->
+  <!--</div>-->
 </div>  
   
-<!--  VueJS  -->
-  <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+  
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.13/vue.js"></script>
 <!-- Vue-Slick   -->
-  <script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.8.0/slick.min.js"></script>
+  <!--<script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.8.0/slick.min.js"></script>-->
 
   <!--  Bootstrap JS  -->
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
