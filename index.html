@@ -19,20 +19,20 @@
 
     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
     <div id="freelancer_data" class="row">
-      <div class="col-xs col-sm-1-5 col-md-1-5 col-lg-1-5">
-        <p class="card-title username text-left"><i class="fa fa-circle" aria-hidden="true"></i>{{ card.username }}</p>
+      <div class="col-6">
+        <p class="card-title username text-left"><i class="fa fa-circle" style="font-size: 9px;" aria-hidden="true"></i>{{ card.username }}</p>
       </div>
-      <div class="col-xs col-sm-1-5 col-md-1-5 col-lg-1-5">
-                <p class="card-title username text-left"><i class="fa fa-star" aria-hidden="true"></i>{{ card.rating.counter }} <span style="color: rgba(0,0,0,0.4); font-size: 80%;">({{ card.rating.quantity }})</span></p>     
+      <div class="col-6">
+                <p class="card-title username text-right"><i class="fa fa-star" aria-hidden="true"></i>{{ card.rating.counter }} <span style="color: rgba(0,0,0,0.4); font-size: 90%;">({{ card.rating.quantity }})</span></p>     
       </div>        
 
     </div>
           
     <div id="price_data" class="row">
-      <div class="col-xs col-sm-1-5 col-md-1-5 col-lg-1-5">
+      <div class="col-6">
         <p href="#" class="text-left"><i class="fa fa-heart" aria-hidden="true"></i></p>   
       </div>
-      <div class="col-xs col-sm-1-5 col-md-1-5 col-lg-1-5">
+      <div class="col-6">
         <p href="#" class="card-price text-right">{{ card.price }}<i class="fa fa-rub" aria-hidden="true"></i></p>        
       </div>        
 
