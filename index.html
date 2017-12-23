@@ -102,37 +102,6 @@
    </div>
     
   </div>
-  <template id="taskcard-template">
-    <div class="task-card-style col-xs-1-5 col-sm-1-5 col-md-1-5 col-lg-1-5" v-show="active">
-            <img class="card-img-top" :src="card.image" alt="чёткое описание картинки для людей с ограниченными возможностями по зрению">
-            <div class="card-body">
-
-              <p class="card-text">{{ card.text }}</p>
-              <div id="freelancer_data" class="row">
-                <div class="col-6">
-                  <p class="card-title username text-left"><i class="fa fa-circle user_status_offline" style="font-size: 9px;" aria-hidden="true"></i> {{ card.username }}</p>
-                </div>
-                <div class="col-6">
-                  <p class="card-title text-right"><i class="fa fa-star" aria-hidden="true"></i> {{ card.rating.counter }} <span style="color: rgba(0,0,0,0.4); font-size: 90%;">({{ card.rating.quantity }})</span></p>     
-                </div>        
-
-              </div>
-
-              <div id="price_data" class="row">
-                <div class="col-6">
-                  <p class="card-heart text-left"><i class="fa fa-heart" aria-hidden="true"></i></p>   
-                </div>
-                <div class="col-6">
-                  <p class="card-price text-right">{{ card.price }}<i class="fa fa-rub" aria-hidden="true"></i></p>        
-                </div>        
-
-              </div>          
-
-
-            </div>
-          </div>   
-  </template>
-
 </div>
 <div class="jumbotron" style="display: none;">
   <h2>Слайдер карточек</h2>
@@ -143,14 +112,6 @@
  <script>
   new Vue({
   el: '#cards_dashboard',
-  components: {
-    taskcard: {
-      template: '#taskcard-template'
-    },
-    slide: {
-      template: 'slide'
-    }
-  },
   data: {
     card: {
       image: 'https://source.unsplash.com/random/800x600',
