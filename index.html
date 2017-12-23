@@ -9,41 +9,48 @@
 </head>
 <body>
 <div class="jumbotron">
-  <h2 class="text-center">Список карточек</h2>
+  <h2 class="header text-center">Список карточек</h2>
   <div id="cards_dashboard" class="container">
+      <taskcard></taskcard>
+      <taskcard></taskcard>
+    
     <div class="row">
- 
-      <div class="task_card col-xs-1-5 col-sm-1-5 col-md-1-5 col-lg-1-5">
-        <img class="card-img-top" :src="card.image" alt="чёткое описание картинки для людей с ограниченными возможностями по зрению">
-        <div class="card-body">
-
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <div id="freelancer_data" class="row">
-      <div class="col-6">
-        <p class="card-title username text-left"><i class="fa fa-circle user_status_offline" style="font-size: 9px;" aria-hidden="true"></i> {{ card.username }}</p>
-      </div>
-      <div class="col-6">
-                <p class="card-title text-right"><i class="fa fa-star" aria-hidden="true"></i> {{ card.rating.counter }} <span style="color: rgba(0,0,0,0.4); font-size: 90%;">({{ card.rating.quantity }})</span></p>     
-      </div>        
-
-    </div>
-          
-    <div id="price_data" class="row">
-      <div class="col-6">
-        <p class="card-heart text-left"><i class="fa fa-heart" aria-hidden="true"></i></p>   
-      </div>
-      <div class="col-6">
-        <p class="card-price text-right">{{ card.price }}<i class="fa fa-rub" aria-hidden="true"></i></p>        
-      </div>        
-
-    </div>          
       
-          
-  </div>
-      </div>   
-     
+      
    </div>
+    
   </div>
+  <template id="taskcard-template">
+    <div class="task-card-style col-xs-1-5 col-sm-1-5 col-md-1-5 col-lg-1-5" v-show="active">
+            <img class="card-img-top" :src="card.image" alt="чёткое описание картинки для людей с ограниченными возможностями по зрению">
+            <div class="card-body">
+
+              <p class="card-text">{{ card.text }}</p>
+              <div id="freelancer_data" class="row">
+                <div class="col-6">
+                  <p class="card-title username text-left"><i class="fa fa-circle user_status_offline" style="font-size: 9px;" aria-hidden="true"></i> {{ card.username }}</p>
+                </div>
+                <div class="col-6">
+                  <p class="card-title text-right"><i class="fa fa-star" aria-hidden="true"></i> {{ card.rating.counter }} <span style="color: rgba(0,0,0,0.4); font-size: 90%;">({{ card.rating.quantity }})</span></p>     
+                </div>        
+
+              </div>
+
+              <div id="price_data" class="row">
+                <div class="col-6">
+                  <p class="card-heart text-left"><i class="fa fa-heart" aria-hidden="true"></i></p>   
+                </div>
+                <div class="col-6">
+                  <p class="card-price text-right">{{ card.price }}<i class="fa fa-rub" aria-hidden="true"></i></p>        
+                </div>        
+
+              </div>          
+
+
+            </div>
+          </div>   
+  </template>
+
 </div>
 <div class="jumbotron" style="display: none;">
   <h2>Слайдер карточек</h2>
@@ -51,9 +58,11 @@
   
 <!--  VueJS  -->
   <script src="https://cdn.jsdelivr.net/npm/vue"></script>
-<!--  Bootstrap JS  -->
+ 
+  <!--  Bootstrap JS  -->
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
 </body>
+  
 </html>
