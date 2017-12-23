@@ -3,9 +3,14 @@
   <meta charset="UTF-8">
   <title>test task for M**a*o* 2017</title>
   <link rel="stylesheet" href="css/personal-grid.css">
-<!--   <script src="js/cards.js"></script> -->
+  <script src="js/cards.js"></script>
+  <script src="js/slider.js"></script>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
 <script src="https://use.fontawesome.com/d1b75bdd7b.js"></script>
+
+<!--  slider  -->
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.8.0/slick.css"/>
+
   
 </head>
 <body>
@@ -103,34 +108,20 @@
     
   </div>
 </div>
-<div class="jumbotron" style="display: none;">
-  <h2>Слайдер карточек</h2>
+<div class="jumbotron">
+  <h2 class="header text-center">Слайдер карточек</h2>
+  <div id="slider" class="row lazy">
+    <div><img data-lazy="img/https://source.unsplash.com/random/800x600"/></div>      
+    <div><img data-lazy="img/https://source.unsplash.com/random/801x600"/></div>      
+    <div><img data-lazy="img/https://source.unsplash.com/random/799x600"/></div>      
+  </div>
 </div>  
   
 <!--  VueJS  -->
   <script src="https://cdn.jsdelivr.net/npm/vue"></script>
- <script>
-  var cards_dashboard = new Vue({
-  el: '#cards_dashboard',
-  data: {
-    card: {
-      image: 'https://source.unsplash.com/random/800x600',
-      text: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec qu',
-      username_status: ['online', 'offline'],
-      username: 'userName',
-      
-      rating: {
-        counter: '5.0',
-        quantity: 260
-      },
-      price: 'от 500 '
-    }
-  }
-})
-  </script>
-  
-  
-  
+<!-- Vue-Slick   -->
+  <script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.8.0/slick.min.js"></script>
+
   <!--  Bootstrap JS  -->
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
