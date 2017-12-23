@@ -13,27 +13,27 @@
   <div id="cards_dashboard" class="container">
     <div class="row">
  
-      <div class="col-xs col-sm-1-5 col-md-1-5 col-lg-1-5">
+      <div class="task_card col-xs-1-5 col-sm-1-5 col-md-1-5 col-lg-1-5">
         <img class="card-img-top" :src="card.image" alt="чёткое описание картинки для людей с ограниченными возможностями по зрению">
         <div class="card-body">
 
     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
     <div id="freelancer_data" class="row">
       <div class="col-6">
-        <p class="card-title username text-left"><i class="fa fa-circle" style="font-size: 9px;" aria-hidden="true"></i>{{ card.username }}</p>
+        <p class="card-title username text-left"><i class="fa fa-circle user_status_offline" style="font-size: 9px;" aria-hidden="true"></i> {{ card.username }}</p>
       </div>
       <div class="col-6">
-                <p class="card-title username text-right"><i class="fa fa-star" aria-hidden="true"></i>{{ card.rating.counter }} <span style="color: rgba(0,0,0,0.4); font-size: 90%;">({{ card.rating.quantity }})</span></p>     
+                <p class="card-title text-right"><i class="fa fa-star" aria-hidden="true"></i> {{ card.rating.counter }} <span style="color: rgba(0,0,0,0.4); font-size: 90%;">({{ card.rating.quantity }})</span></p>     
       </div>        
 
     </div>
           
     <div id="price_data" class="row">
       <div class="col-6">
-        <p href="#" class="text-left"><i class="fa fa-heart" aria-hidden="true"></i></p>   
+        <p class="card-heart text-left"><i class="fa fa-heart" aria-hidden="true"></i></p>   
       </div>
       <div class="col-6">
-        <p href="#" class="card-price text-right">{{ card.price }}<i class="fa fa-rub" aria-hidden="true"></i></p>        
+        <p class="card-price text-right">{{ card.price }}<i class="fa fa-rub" aria-hidden="true"></i></p>        
       </div>        
 
     </div>          
