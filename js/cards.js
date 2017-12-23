@@ -10,4 +10,5 @@ var cards_dashboard = new Vue({
   data: {
 
   }
+  
 })
