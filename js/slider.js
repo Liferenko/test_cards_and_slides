@@ -1,24 +1,25 @@
-/*global $*/
-$('.carousel[data-type="multi"] .item').each(function() {
-	var next = $(this).next();
-	if (!next.length) {
-		next = $(this).siblings(":first");
-	}
-	next
-		.children(":first-child")
-		.clone()
-		.appendTo($(this));
+/*global Vue*/
 
-	for (var i = 0; i < 2; i++) {
-		next = next.next();
-		if (!next.length) {
-			next = $(this).siblings(":first");
-		}
+var slide_dashboard = new Vue({
+  el: '#slide_dashboard',
+  components: {
+    slidecard: {
+      template: '#slide-template'
+    },
+      card: {
+      image: 'https://source.unsplash.com/random/800x600',
+      text: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec qu',
+      username_status: ['online', 'offline'],
+      username: 'userName',
+      
+      rating: {
+        counter: '5.0',
+        quantity: 260
+      },
+      price: 'от 500 '
+    }},
+  data: {
 
-		next
-			.children(":first-child")
-			.clone()
-			.appendTo($(this));
-	}
-});
+  }
+})
 
