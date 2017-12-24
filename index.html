@@ -16,7 +16,7 @@
 <body>
 <div class="jumbotron">
   <h2 class="header text-center">Список карточек</h2>
-  <div id="cards_dashboard" class="">
+  <div id="cards_dashboard" class="row">
     <taskcard></taskcard>
     <taskcard></taskcard>
     <taskcard></taskcard>
@@ -29,12 +29,12 @@
     <taskcard></taskcard>
     <taskcard></taskcard>
 
-</div>
+  </div>
 
 
 
 </div>
-
+<div class="clearfix"></div>
 <div class="jumbotron">
   <h2 class="header text-center">Слайдер карточек</h2>
   <div id="slide_dashboard">
@@ -202,7 +202,27 @@
         infinite: true,
         centerMode: true,
         slidesToShow: 5,
-        slidesToScroll: 1
+        slidesToScroll: 1,
+        responsive: [
+          {
+            breakpoint: 768,
+            settings: {
+              arrows: false,
+              centerMode: true,
+              centerPadding: '40px',
+              slidesToShow: 3
+            }
+          },
+          {
+            breakpoint: 480,
+            settings: {
+              arrows: false,
+              centerMode: true,
+              centerPadding: '40px',
+              slidesToShow: 1
+            }
+          }
+        ]  
       });
 
       $(".lazy").slick({

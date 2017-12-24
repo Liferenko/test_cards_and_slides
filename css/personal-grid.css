@@ -22,9 +22,12 @@
 #freelancer_data {
   border-bottom: 1px solid rgba(0,0,0,0.1);
   padding-bottom: 0;
+  font-size: 70%;
 }
 #price_data {
   padding-top: 7px;
+  font-size: 70%;
+  
 }
 
 .username {
