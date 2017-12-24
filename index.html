@@ -3,7 +3,7 @@
   <meta charset="UTF-8">
   <title>test task for M**a*o* 2017</title>
   <link rel="stylesheet" href="css/personal-grid.css">
-  <link rel="stylesheet" href="css/carousel.css">
+  <!--<link rel="stylesheet" href="css/carousel.css">-->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
   <script src="https://use.fontawesome.com/d1b75bdd7b.js"></script>
 
@@ -17,7 +17,49 @@
 <div class="jumbotron">
   <h2 class="header text-center">Список карточек</h2>
   <div id="cards_dashboard" class="row">
-    <taskcard></taskcard>
+            <div class="Dialog" v-show="active">
+                <div class="Dialog__overlay" @click="close()"></div>
+                <div class="Dialog__content">
+                    <div class="Dialog__body">
+                        карточка активна
+                    </div>
+                    <div class="Dialog__footer col">
+                        <button class="btn btn-sm" @click="onCancel()">закрыть</button>
+                        
+                    </div>
+                </div>
+                
+            </div>
+
+           <div class="task-card-style col-xs col-sm-1-5 col-md-1-5 col-lg-1-5" @click="open()">
+            <img class="card-img-top" src="https://source.unsplash.com/random/800x600" alt="чёткое описание картинки для людей с ограниченными возможностями по зрению">
+            <div class="card-body">
+
+              <p class="card-text text_checker">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec qu</p>
+              <div id="freelancer_data" class="row">
+                <div class="col-6">
+                  <p class="card-title username text-left"><i class="fa fa-circle user_status_offline" style="font-size: 9px;" aria-hidden="true"></i> userName</p>
+                </div>
+                <div class="col-6">
+                  <p class="card-score text-right"><i class="fa fa-star" aria-hidden="true"></i> 5.0 <span style="color: rgba(0,0,0,0.4); font-size: 90%;">(260)</span></p>     
+                </div>        
+
+              </div>
+
+              <div id="price_data" class="row">
+                <div class="col-6">
+                  <p class="card-heart text-left"><i class="fa fa-heart" aria-hidden="true"></i></p>   
+                </div>
+                <div class="col-6">
+                  <p class="card-price text-right">от 500 <i class="fa fa-rub" aria-hidden="true"></i></p>        
+                </div>        
+
+              </div>          
+
+
+            </div>
+          </div>
+     
     <taskcard></taskcard>
     <taskcard></taskcard>
     <taskcard></taskcard>
@@ -28,7 +70,6 @@
     <taskcard></taskcard>
     <taskcard></taskcard>
     <taskcard></taskcard>
-
   </div>
 
 
@@ -41,68 +82,27 @@
     
     
     <!--Vue Slick-->
-      <section class="center slider lazy">
-          <div>
+      <section class="center slider">
             <slidecard></slidecard>
-          </div>
-          <div>
             <slidecard></slidecard>
-          </div>
-          <div>
             <slidecard></slidecard>
-          </div>
-          <div>
             <slidecard></slidecard>
-          </div>
-          <div>
             <slidecard></slidecard>
-          </div>
-          <div>
             <slidecard></slidecard>
-          </div>
-          <div>
             <slidecard></slidecard>
-          </div>
-          <div>
             <slidecard></slidecard>
-          </div>
-          <div>
             <slidecard></slidecard>
-          </div>
-          <div>
             <slidecard></slidecard>
-          </div>
-          <div>
             <slidecard></slidecard>
-          </div>
-          <div>
             <slidecard></slidecard>
-          </div>
-          <div>
             <slidecard></slidecard>
-          </div>
-          <div>
             <slidecard></slidecard>
-          </div>
-          <div>
             <slidecard></slidecard>
-          </div>
-          <div>
             <slidecard></slidecard>
-          </div>
-          <div>
             <slidecard></slidecard>
-          </div>
-          <div>
             <slidecard></slidecard>
-          </div>
-          <div>
             <slidecard></slidecard>
-          </div>
-          <div>
-            <slidecard></slidecard>
-          </div>        
-        
+            <slidecard></slidecard>     
       </section>
   </div>
     
@@ -110,8 +110,8 @@
 </div>
 
 
-<template id="taskcard-template">        
-          <div class="task-card-style col-xs col-sm-1-5 col-md-1-5 col-lg-1-5">
+<template id="taskcard-template">    
+          <div class="task-card-style col-xs col-sm-1-5 col-md-1-5 col-lg-1-5" @click="open()">
             <img class="card-img-top" src="https://source.unsplash.com/random/800x600" alt="чёткое описание картинки для людей с ограниченными возможностями по зрению">
             <div class="card-body">
 
@@ -141,7 +141,7 @@
           </div>
   </template>
 <template id="slide-template">        
-          <div class="task-card-style col-xs col-sm col-md col-lg">
+          <div class="task-card-style col-xs col-sm col-md col-lg" @click="open()">
             <img class="card-img-top" src="https://source.unsplash.com/random/800x600" alt="чёткое описание картинки для людей с ограниченными возможностями по зрению">
             <div class="card-body">
 
@@ -170,7 +170,6 @@
             </div>
           </div>
   </template>  
-
 
 
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.13/vue.js"></script>

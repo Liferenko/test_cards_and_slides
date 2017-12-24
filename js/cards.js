@@ -1,5 +1,4 @@
 /*global Vue*/
-
 var cards_dashboard = new Vue({
   el: '#cards_dashboard',
   components: {
@@ -18,7 +17,25 @@ var cards_dashboard = new Vue({
       },
       price: 'от 500 '
     }},
-  data: {
-
+    data: function() {
+  return {
+    active: false
+    
+    }
+    
+  },
+  methods: {
+      open: function() {
+          this.active = true
+      },
+      close: function() {
+          this.active = false
+      },
+      onCancel: function() {
+          this.close();
+      },
+      onConfirm: function() {
+          this.close();
+      }
   }
-})
+});
