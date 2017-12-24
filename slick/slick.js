@@ -15,6 +15,43 @@
 
  */
 /* global window, document, define, jQuery, setInterval, clearInterval */
+
+  /*global $*/
+    $(document).on('ready', function() {
+      $(".center").slick({
+        dots: false,
+        infinite: true,
+        slidesToShow: 5,
+        slidesToScroll: 1,
+        responsive: [
+          {
+            breakpoint: 768,
+            settings: {
+              arrows: true,
+              centerMode: true,
+              centerPadding: '40px',
+              slidesToShow: 1
+            }
+          },
+          {
+            breakpoint: 480,
+            settings: {
+              arrows: true,
+              centerMode: true,
+              centerPadding: '40px',
+              slidesToShow: 1
+            }
+          }
+        ]  
+      });
+
+      $(".lazy").slick({
+        lazyLoad: 'ondemand', // ondemand progressive anticipated
+        infinite: true
+      });
+    });
+
+
 ;(function(factory) {
     'use strict';
     if (typeof define === 'function' && define.amd) {
