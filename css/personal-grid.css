@@ -1,11 +1,24 @@
+.task-card-style {
+  border: 1px solid #ddd;
+  background: #fff;
+  transition: all .4s ease-in-out;
+}
+
+.task-card-style:hover {
+  
+  background: #f0f0f0;
+  cursor: pointer;
+  border: 1px solid rgba(0, 153, 0, 0.3);  
+  border-radius: 2px;
+  box-shadow: 2px 5px 4px rgba(0, 153, 0, 0.3);
+  transform: translateY(-2px);
+}
+
 .header {
   padding: 5% 0 3%;
 }
 
-.task-card-style {
-  border: 1px solid #ddd;
-  background: #fff;
-}
+
 #freelancer_data {
   border-bottom: 1px solid rgba(0,0,0,0.1);
   padding-bottom: 0;
@@ -24,12 +37,51 @@
   color: #ddd;
 }
 
+.card-score {
+  color: #ffa800;
+}
 .card-heart {
   color: #DDD;
 }
+.card-heart i:hover {
+  color: #ffa800;
+}
+
 .card-price {
   color: #090;
+  font-weight: bold;
 }
+.card-price i {
+  font-size: 90%;
+}
+
+/* modal window */
+
+/* Dialog */
+.Dialog__overlay {
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.Dialog__content {
+    position: fixed;
+    z-index: 13;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    text-align: center;
+    border-radius: 2px;
+    width: 70%;
+    max-width: 250px;
+}
+
+/* modal window*/
 
 
 .col-xs-1-5,
