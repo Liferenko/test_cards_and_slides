@@ -30,36 +30,7 @@
                 </div>
                 
             </div>
-
-           <div class="task-card-style col-xs col-sm-1-5 col-md-1-5 col-lg-1-5" @click="open()">
-            <img class="card-img-top" src="https://source.unsplash.com/random/800x600" alt="чёткое описание картинки для людей с ограниченными возможностями по зрению">
-            <div class="card-body">
-
-              <p class="card-text text_checker">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec qu</p>
-              <div id="freelancer_data" class="row">
-                <div class="col-6">
-                  <p class="card-title username text-left"><i class="fa fa-circle user_status_offline" style="font-size: 9px;" aria-hidden="true"></i> userName</p>
-                </div>
-                <div class="col-6">
-                  <p class="card-score text-right"><i class="fa fa-star" aria-hidden="true"></i> 5.0 <span style="color: rgba(0,0,0,0.4); font-size: 90%;">(260)</span></p>     
-                </div>        
-
-              </div>
-
-              <div id="price_data" class="row">
-                <div class="col-6">
-                  <p class="card-heart text-left"><i class="fa fa-heart" aria-hidden="true"></i></p>   
-                </div>
-                <div class="col-6">
-                  <p class="card-price text-right">от 500 <i class="fa fa-rub" aria-hidden="true"></i></p>        
-                </div>        
-
-              </div>          
-
-
-            </div>
-          </div>
-     
+    <taskcard></taskcard>    
     <taskcard></taskcard>
     <taskcard></taskcard>
     <taskcard></taskcard>
@@ -88,16 +59,19 @@
             <slidecard></slidecard>
             <slidecard></slidecard>
             <slidecard></slidecard>
+            
             <slidecard></slidecard>
             <slidecard></slidecard>
             <slidecard></slidecard>
             <slidecard></slidecard>
             <slidecard></slidecard>
+            
             <slidecard></slidecard>
             <slidecard></slidecard>
             <slidecard></slidecard>
             <slidecard></slidecard>
             <slidecard></slidecard>
+            
             <slidecard></slidecard>
             <slidecard></slidecard>
             <slidecard></slidecard>
@@ -112,16 +86,16 @@
 
 <template id="taskcard-template">    
           <div class="task-card-style col-xs col-sm-1-5 col-md-1-5 col-lg-1-5" @click="open()">
-            <img class="card-img-top" src="https://source.unsplash.com/random/800x600" alt="чёткое описание картинки для людей с ограниченными возможностями по зрению">
+            <img class="card-img-top" :src="card.image" alt="чёткое описание картинки для людей с ограниченными возможностями по зрению">
             <div class="card-body">
 
-              <p class="card-text text_checker">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec qu</p>
+              <p class="card-text text_checker">{{ card.text }}</p>
               <div id="freelancer_data" class="row">
                 <div class="col-6">
-                  <p class="card-title username text-left"><i class="fa fa-circle user_status_offline" style="font-size: 9px;" aria-hidden="true"></i> userName</p>
+                  <p class="card-title username text-left"><i class="fa fa-circle user_status_offline" style="font-size: 9px;" aria-hidden="true"></i> {{ card.username }}</p>
                 </div>
                 <div class="col-6">
-                  <p class="card-score text-right"><i class="fa fa-star" aria-hidden="true"></i> 5.0 <span style="color: rgba(0,0,0,0.4); font-size: 90%;">(260)</span></p>     
+                  <p class="card-score text-right"><i class="fa fa-star" aria-hidden="true"></i> {{ card.rating.counter }} <span style="color: rgba(0,0,0,0.4); font-size: 90%;">({{ card.rating.quantity }})</span></p>     
                 </div>        
 
               </div>
@@ -142,16 +116,16 @@
   </template>
 <template id="slide-template">        
           <div class="task-card-style col-xs col-sm col-md col-lg" @click="open()">
-            <img class="card-img-top" src="https://source.unsplash.com/random/800x600" alt="чёткое описание картинки для людей с ограниченными возможностями по зрению">
+            <img class="card-img-top" :src="slide.image" alt="чёткое описание картинки для людей с ограниченными возможностями по зрению">
             <div class="card-body">
 
-              <p class="card-text text_checker">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec qu</p>
+              <p class="card-text text_checker">{{ slide.text }}</p>
               <div id="freelancer_data" class="row">
                 <div class="col-6">
-                  <p class="card-title username text-left"><i class="fa fa-circle user_status_offline" style="font-size: 9px;" aria-hidden="true"></i> userName</p>
+                  <p class="card-title username text-left"><i class="fa fa-circle user_status_offline" style="font-size: 9px;" aria-hidden="true"></i> {{ slide.username }}</p>
                 </div>
                 <div class="col-6">
-                  <p class="card-score text-right"><i class="fa fa-star" aria-hidden="true"></i> 5.0 <span style="color: rgba(0,0,0,0.4); font-size: 90%;">(260)</span></p>     
+                  <p class="card-score text-right"><i class="fa fa-star" aria-hidden="true"></i> {{ slide.rating.counter }}<span style="color: rgba(0,0,0,0.4); font-size: 90%;">({{ slide.rating.quantity }})</span></p>     
                 </div>        
 
               </div>
@@ -161,7 +135,7 @@
                   <p class="card-heart text-left"><i class="fa fa-heart" aria-hidden="true"></i></p>   
                 </div>
                 <div class="col-6">
-                  <p class="card-price text-right">от 500 <i class="fa fa-rub" aria-hidden="true"></i></p>        
+                  <p class="card-price text-right">{{ slide.price }} <i class="fa fa-rub" aria-hidden="true"></i></p>        
                 </div>        
 
               </div>          
