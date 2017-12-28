@@ -1,5 +1,5 @@
 /*global $*/
-var size = 80,
+var size = 88,
     cardContent= $('.text_checker'),
     cardText = cardContent.text();
     

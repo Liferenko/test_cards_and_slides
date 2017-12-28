@@ -9,7 +9,7 @@ var cards_dashboard = new Vue({
           active: false,
           card: {
             image: 'https://source.unsplash.com/random/800x600?count=30',
-            text: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec qu',
+            text: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturi',
             username_status: ['online', 'offline'],
             username: 'userName',
             rating: {
